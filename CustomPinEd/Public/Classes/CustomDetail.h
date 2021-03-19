@@ -1,11 +1,12 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+Ôªø// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "DetailCustomizations.h"
 #include "IPropertyTypeCustomization.h"
-#include "Widgets/Input/STextComboBox.h"
+//#include "Widgets/Input/STextComboBox.h"
+#include "CustomTextComboBox.h"
 #include "Styling/SlateTypes.h"
 
 class CUSTOMPINED_API ICustomDetailBase : public IPropertyTypeCustomization
@@ -18,7 +19,7 @@ public:
 private:
 	TSharedPtr<IPropertyHandle> StructPropertyHandle;
 	TSharedPtr<IPropertyHandle> KeyHandle;
-	TSharedPtr<STextComboBox> KeyComboBox;
+	TSharedPtr<SCustomTextComboBox> KeyComboBox;
 
 	void OnStateValueChanged(TSharedPtr<FString> ItemSelected, ESelectInfo::Type SelectInfo);
 	void OnStateListOpened();
@@ -33,7 +34,7 @@ protected:
 };
 
 
-// FCustomPinStructÇ…ÉAÉNÉZÉXÇ∑ÇÈóp
+// FCustomPinStruct„Å´„Ç¢„ÇØ„Çª„Çπ„Åô„ÇãÁî®
 class CUSTOMPINED_API ICustomPinStructDetail : public ICustomDetailBase
 {
 public:

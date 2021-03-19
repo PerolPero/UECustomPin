@@ -1,4 +1,4 @@
-// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved. 
+ï»¿// Copyright 1998-2017 Epic Games, Inc. All Rights Reserved. 
 
 #include "CustomPinEd/Public/CustomPinEd.h"
 #include "Modules/ModuleManager.h"
@@ -20,13 +20,13 @@ IMPLEMENT_MODULE( FCustomPinEd, CustomPinEd )
 
 void FCustomPinEd::StartupModule() 
 {
-	// Ú×ƒpƒlƒ‹‚Éì¬‚µ‚½ƒvƒ‹ƒ_ƒEƒ“ƒƒjƒ…[‚ğ•\¦o—ˆ‚é‚æ‚¤‚É“o˜^‚·‚é
+	// è©³ç´°ãƒ‘ãƒãƒ«ã«ä½œæˆã—ãŸãƒ—ãƒ«ãƒ€ã‚¦ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’è¡¨ç¤ºå‡ºæ¥ã‚‹ã‚ˆã†ã«ç™»éŒ²ã™ã‚‹
 	FPropertyEditorModule& PropertyModule = FModuleManager::LoadModuleChecked<FPropertyEditorModule>("PropertyEditor");
 	PropertyModule.RegisterCustomPropertyTypeLayout("CustomPinStruct", FOnGetPropertyTypeCustomizationInstance::CreateStatic(&ICustomPinStructDetail::MakeInstance));
 } 
 void FCustomPinEd::ShutdownModule() 
 {
-	// Œãn––
+	// å¾Œå§‹æœ«
 	FPropertyEditorModule& PropertyModule = FModuleManager::LoadModuleChecked<FPropertyEditorModule>("PropertyEditor");
 	PropertyModule.UnregisterCustomPropertyTypeLayout("CustomPinStruct");
 } 
